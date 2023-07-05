@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Credit Card replenishment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="inside_card">
+        <div class="card_front" id="front">
+          <div class="card_up">
+            <div class="bank">
+              <p>Bank Name</p>
+            </div>
+            <img src="imgs/signal.png" alt="signal" />
+            <!-- <a href="https://www.flaticon.com/free-icons/wifi-signal" title="wifi signal icons">Wifi signal icons created by icon wind - Flaticon</a> -->
+          </div>
+          <div class="card_center">
+            <img src="imgs/creditcardchip.png" alt="chip" />
+          </div>
+          <div class="card_bottom">
+            <div class="bottom_left">
+              <p class="card_info p_cardnumber" id="cardnumber_p">
+                0000 0000 0000 0000
+              </p>
+              <p class="card_info" id="valid_p">Valid Thru</p>
+              <p class="card_info p_valid" id="cardvalid_p">00/00</p>
+              <div class="card_info" class="namesurname">
+                <p class="p_name">Name</p>
+                &nbsp
+                <p class="p_surname">Surname</p>
+              </div>
+            </div>
+            <div class="bottom_right">
+              <img src="imgs/mastercard.png" alt="mastercardlogo" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card_back">
+          <div class="card_back_top">
+            <p>Lorem ipsum dolor sit</p>
+          </div>
+          <div class="card_back_blackstripe"></div>
+          <div class="card_back_cvv">
+            <p id="cvv_number">000</p>
+          </div>
+          <div class="card_back_info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              similique cumque sequi culpa corrupti voluptate! Asperiores
+              voluptas ipsum quasi molestiae, deserunt impedit nemo, non eum,
+              tempore reprehenderit rem cumque possimus
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="number_valid">
+        <div class="number">
+          <label> Card Number: </label>
+          <input
+            type="text"
+            maxlength="19"
+            id="cardnumber"
+            placeholder="0000 0000 0000 0000"
+          />
+        </div>
+        <div class="valid">
+          <label> Valid Thru: </label>
+          <input type="text" maxlength="5" id="valid" placeholder="00/00" />
+        </div>
+        <div class="cvv">
+          <label> CVV: </label>
+          <input type="text" maxlength="3" placeholder="000" id="cvv_input" />
+        </div>
+      </div>
+      <div class="name_surname">
+        <div class="name">
+          <label> Name: </label>
+          <input
+            type="text"
+            maxlength="20"
+            id="nameid"
+            placeholder="Enter Your Name"
+          />
+        </div>
+        <div class="surname">
+          <label> Surname: </label>
+          <input
+            type="text"
+            maxlength="20"
+            id="surname"
+            placeholder="Enter Your Surname"
+          />
+        </div>
+      </div>
+      <h1 class="error"></h1>
+      <button type="submit" id="checkout">Checkout</button>
+    </div>
+
+    <div class="success">
+      <h1>Success !</h1>
+      <button type="submit" id="tryagain">Try Again</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
